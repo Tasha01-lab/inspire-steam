@@ -10,5 +10,5 @@ for x in range (-180,210,30):
 for x in range (-180,210,30):
     print(math.tan(x))
 for x in range (-180,210,30):
-    print(math.sin(x))
+    print(math.cos(x))
 
