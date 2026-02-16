@@ -6,9 +6,13 @@
 import math
 
 for x in range (-180,210,30):
-    print(math.sin(x))
+    print(f"sine of {x} = {math.sin(x)}")
 for x in range (-180,210,30):
-    print(math.tan(x))
+    print(f"tangent of {x} = {math.tan(x)}")
 for x in range (-180,210,30):
-    print(math.cos(x))
+    print(f"cosine of {x} = {math.cos(x)}")
 
+#Put information in a table
+print("----------------------")
+for x in range (-180,210,30):
+    print(|angle|)
