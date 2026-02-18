@@ -5,14 +5,15 @@
 
 import math
 
-for x in range (-180,210,30):
-    print(f"sine of {x} = {math.sin(x)}")
-for x in range (-180,210,30):
-    print(f"tangent of {x} = {math.tan(x)}")
-for x in range (-180,210,30):
-    print(f"cosine of {x} = {math.cos(x)}")
+#for x in range (-180,210,30):
+    #print(f"sine of {x} = {math.sin(x)}")
+#for x in range (-180,210,30):
+    #print(f"tangent of {x} = {math.tan(x)}")
+#for x in range (-180,210,30):
+    #print(f"cosine of {x} = {math.cos(x)}")
 
 #Put information in a table
 print("----------------------")
+print("angle")
 for x in range (-180,210,30):
-    print(|angle|)
+   print(f"{x}\t")
