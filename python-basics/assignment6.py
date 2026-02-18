@@ -18,3 +18,6 @@ print("\t ***\t")
 print("\t  *\t")
 
 #Method 2
+
+   
+
