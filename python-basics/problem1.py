@@ -1,7 +1,7 @@
 #Name: Tasha Margie Musau
-#Date: 11/02/2026
+#Date: 22/02/2026
 
-#Program to add,subtract,divide and multiply two numbers from input
+#Program to correct the warrior health
 
 class FighterCharacter:
 
@@ -20,7 +20,7 @@ class FighterCharacter:
     def kick(self, opponent):
 
         character_damage = self.character_damage
-        opponent.character_health = opponent.character_health / character_damage
+        opponent.character_health = opponent.character_health - character_damage
         print(f"Game Log: {self.character_role} deals a damage of {character_damage} to the {opponent.character_role}.")
     
     def takle(self, opponent):

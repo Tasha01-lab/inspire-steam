@@ -1,7 +1,7 @@
 #Name: Tasha Margie Musau
-#Date: 11/02/2026
+#Date: 22/02/2026
 
-#Program to add,subtract,divide and multiply two numbers from input
+#Program to add a function for tackling and correct speed of ninja
 
 class FighterCharacter:
 
@@ -20,14 +20,17 @@ class FighterCharacter:
     def kick(self, opponent):
 
         character_damage = self.character_damage
-        opponent.character_health = opponent.character_health / character_damage
+        opponent.character_health = opponent.character_health - character_damage
         print(f"Game Log: {self.character_role} deals a damage of {character_damage} to the {opponent.character_role}.")
     
-    def takle(self, opponent):
-        # implement this so that the opponent's charater_speed is reduced by the damager dealt by the fighter
-        # For instance, if the ninja's speed is 120, a takle from the warrior should reduce their speed to 80
+    def tackle(self, opponent):
+        # implement this so that the opponent's charater_speed is reduced by the damage dealt by the fighter
+        # For instance, if the ninja's speed is 120, a tackle from the warrior should reduce their speed to 80
         # Remember to remove the pass below before running your trial
-        pass
+        character_damage = self.character_damage
+        opponent.character_speed = opponent.character_speed - character_damage
+        print(f"Game Log: {self.character_role} tackles {opponent.character_role} and reduces their speed by {character_damage}.")
+    
         
 
 
@@ -40,6 +43,11 @@ warrior_character.report_status()
 
 ninja_character.run("Up")
 ninja_character.kick(warrior_character)
+
+ninja_character.report_status()
+warrior_character.report_status()
+
+warrior_character.tackle(ninja_character)
 
 ninja_character.report_status()
 warrior_character.report_status()
