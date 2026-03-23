@@ -5,7 +5,7 @@
 
 from pysimverse import Drone
 import time
-import cv2
+import keyboard
 
 drone = Drone()
 drone.connect()
@@ -15,7 +15,7 @@ drone.take_off(5)
 rc_speed = 250
 
 while True:
-    key = cv2.waitKey(1) & 0xff
+    key = keyboard.read_key(1) & 0xff
 
     #get all values to zero
     left_right = 0
@@ -23,21 +23,21 @@ while True:
     up_down = 0
     yaw = 0
 
-    if key==ord("w"):
+    if key == "w":
         forward_backward = rc_speed
-    elif key==ord("s"):
+    elif key == "s":
         forward_backward = -rc_speed
-    elif key==ord("a"):
+    elif key == "a":
         left_right = -rc_speed
-    elif key==ord("d"):
+    elif key == "d":
         left_right = rc_speed
-    elif key==ord("c"):
+    elif key == "c":
         up_down = -rc_speed
-    elif key==ord("q"):
+    elif key == "q":
         yaw = -1
-    elif key==ord("e"):
+    elif key == "e":
         yaw = 1
-    elif key==ord("1") or key == 27:
+    elif key == "1" or key == 27:
         drone.land()
         time.sleep(2)
         break
